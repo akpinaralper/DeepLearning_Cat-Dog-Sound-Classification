@@ -2,16 +2,16 @@
 
 # Kedi ve Köpek Seslerinin CNN Tabanlı Sınıflandırılması
 
-Bu proje, **kedi ve köpek seslerinin** derin öğrenme yöntemleri kullanılarak sınıflandırılmasını amaçlamaktadır.  
-Ses sinyallerinden **Mel-Frequency Cepstral Coefficients (MFCC)** özellikleri çıkarılmış ve bu özellikler **Convolutional Neural Network (CNN)** tabanlı bir model ile sınıflandırılmıştır.
+Bu proje, kedi ve köpek seslerinin derin öğrenme yöntemleri kullanılarak sınıflandırılmasını amaçlamaktadır.  
+Ses sinyallerinden MFCC özellikleri çıkarılmış ve bu özellikler CNN tabanlı bir model ile sınıflandırılmıştır.
 
-Proje, *Derin Öğrenme* dersi kapsamında gerçekleştirilmiş olup veri seti oluşturma, model eğitimi, model değerlendirme ve web tabanlı test aşamalarını içermektedir.
+Proje, Derin Öğrenme dersi kapsamında gerçekleştirilmiş olup veri seti oluşturma, model eğitimi, model değerlendirme ve web tabanlı test aşamalarını içermektedir.
 
 ---
 
 ## Proje Amacı
 
-Bu çalışmanın temel amacı, verilen bir ses kaydının **kediye mi yoksa köpeğe mi ait olduğunu** otomatik olarak tahmin edebilen bir sistem geliştirmektir.  
+Bu çalışmanın temel amacı, verilen bir ses kaydının kediye mi yoksa köpeğe mi ait olduğunu otomatik olarak tahmin edebilen bir sistem geliştirmektir.  
 Ses verilerinin zaman-frekans yapısı dikkate alınarak, MFCC tabanlı özellik çıkarımı ve CNN mimarisi kullanılarak yüksek doğrulukta bir sınıflandırma hedeflenmiştir.
 
 ---
@@ -43,12 +43,11 @@ Veri seti kaynağı:
 ## Kullanılan Yöntem
 
 ### Özellik Çıkarımı
-- Ses dosyaları **16 kHz** örnekleme frekansında okunmuştur.
-- Her ses sinyalinden **MFCC** özellikleri çıkarılmıştır.
+- Her ses sinyalinden MFCC özellikleri çıkarılmıştır.
 - Farklı uzunluktaki seslerin etkisini azaltmak için sabit boyutlu MFCC temsilleri kullanılmıştır.
 
 ### Model Mimarisi
-- **Convolutional Neural Network (CNN)**
+- CNN
 - Girdi: MFCC özellik haritaları
 - Çıkış: İkili sınıflandırma (Kedi / Köpek)
 
