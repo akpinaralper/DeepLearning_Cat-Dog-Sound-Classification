@@ -1,15 +1,14 @@
 import torch
 import gradio as gr
 import librosa
-import numpy as np
 from model import AudioCNN
+
 CUSTOM_CSS = """
 footer {display: none !important;}
 """
 
-
 model = AudioCNN()
-model.load_state_dict(torch.load("audio_model.pth"))
+model.load_state_dict(torch.load("audio_model.pth", map_location="cpu"))
 model.eval()
 
 def predict(audio):
@@ -17,8 +16,8 @@ def predict(audio):
         return "Lütfen bir ses dosyası yükleyin."
 
     file_path = audio
-
     x, sr = librosa.load(file_path, sr=16000)
+
     mfcc = librosa.feature.mfcc(y=x, sr=sr, n_mfcc=40)
     mfcc = librosa.util.fix_length(mfcc, size=20, axis=1)
 
@@ -36,8 +35,6 @@ interface = gr.Interface(
     outputs="text",
     title="Ses Sınıflandırma (Kedi/Köpek)",
     flagging_mode="never",
-    css=CUSTOM_CSS
-
 )
 
-interface.launch()
+interface.launch(share=True, css=CUSTOM_CSS)
