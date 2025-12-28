@@ -86,5 +86,6 @@ Gradio arayüzü üzerinde:
 Bu sayede model, eğitim sonrası pratik olarak da test edilebilmektedir.
 
 
-[rapor.pdf](https://github.com/user-attachments/files/24267636/rapor.pdf)
+
+[rapor.pdf](https://github.com/user-attachments/files/24360278/rapor.pdf)
 
