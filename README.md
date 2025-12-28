@@ -77,6 +77,14 @@ Model, daha önce görülmemiş test verileri üzerinde değerlendirilmiştir.
 Elde edilen sonuçlar, modelin her iki sınıf için de dengeli ve güvenilir bir performans sergilediğini göstermektedir.
 
 ---
+## Web Arayüzü (Gradio)
+
+Gradio arayüzü üzerinde:
+- Kullanıcı kendi ses dosyasını yükleyebilir
+- `examples/` klasöründe bulunan hazır kedi/köpek seslerini tek tıkla seçerek modeli test edebilir
+
+Bu sayede model, eğitim sonrası pratik olarak da test edilebilmektedir.
+
 
 [rapor.pdf](https://github.com/user-attachments/files/24267636/rapor.pdf)
 
